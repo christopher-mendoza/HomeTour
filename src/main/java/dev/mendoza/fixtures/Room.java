@@ -10,11 +10,39 @@ public class Room {
 		this.name = name;
 		this.shortDesc = shortDesc;
 		this.longDesc = longDesc;
-		this.exits = new Room[4];
+		this.exits = new Room[4]; // layout as {north, south, east, west}
 	}
 	
 	public Room[] getExits() {
 		return this.exits;
+	}
+	
+	public Room getNorthExit() {
+		if(this.exits[0] != null) {
+			return this.exits[0];
+		}
+		return null;
+	}
+	
+	public Room getSouthExit() {
+		if(this.exits[1] != null) {
+			return this.exits[1];
+		}
+		return null;
+	}
+	
+	public Room getEastExit() {
+		if(this.exits[2] != null) {
+			return this.exits[2];
+		}
+		return null;
+	}
+	
+	public Room getWestExit() {
+		if(this.exits[3] != null) {
+			return this.exits[3];
+		}
+		return null;
 	}
 	
 	public void setNorthExit(Room room) {

@@ -73,7 +73,8 @@ public class RoomManager {
 		
 		library.setNorthExit(kitchen);
 		
-		court.setWestExit(dining);		
+		court.setWestExit(dining);
+		court.setEastExit(kitchen);
 		
 		// Creating Room Array
 		Room[] manor = {studio, foyer, library, dining, court, kitchen};
