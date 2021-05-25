@@ -1,13 +1,27 @@
 package dev.mendoza.game;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import dev.mendoza.fixtures.Fixture;
 import dev.mendoza.fixtures.Room;
 
 public class Player {
 	private Room currentRoom;
-
+	private List<Fixture> inventory;
+	
 	public Player(Room currentRoom) {
 		super();
 		this.currentRoom = currentRoom;
+		this.inventory = new ArrayList<Fixture>();
+	}
+
+	public List<Fixture> getInventory() {
+		return inventory;
+	}
+
+	public void setInventory(List<Fixture> inventory) {
+		this.inventory = inventory;
 	}
 
 	public Room getCurrentRoom() {
@@ -29,6 +43,20 @@ public class Player {
 		System.out.println("You observe your surroundings.");
 		System.out.println(this.currentRoom.getLongDesc());
 		options();
+	}
+	
+	// Take item
+	public void take(Fixture item) {
+		System.out.println("You take " + item.getName() + ".");
+		this.inventory.add(item);
+	}
+	
+	// Print inventory
+	public void bag() {
+		for(Fixture i : this.inventory) {
+			System.out.println(i.getName());
+			System.out.println(i.getDesc());
+		}
 	}
 	
 	// Show available rooms to player

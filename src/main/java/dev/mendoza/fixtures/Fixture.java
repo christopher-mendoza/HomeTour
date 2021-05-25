@@ -2,14 +2,12 @@ package dev.mendoza.fixtures;
 
 public class Fixture {
 	private String name;
-	private String shortDesc;
-	private String longDesc;
+	private String desc;
 	
-	public Fixture(String name, String shortDesc, String longDesc) {
+	public Fixture(String name, String desc) {
 		super();
 		this.name = name;
-		this.shortDesc = shortDesc;
-		this.longDesc = longDesc;
+		this.desc = desc;
 	}
 	
 	public String getName() {
@@ -18,17 +16,11 @@ public class Fixture {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getShortDesc() {
-		return shortDesc;
+	public String getDesc() {
+		return desc;
 	}
-	public void setShortDesc(String shortDesc) {
-		this.shortDesc = shortDesc;
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
-	public String getLongDesc() {
-		return longDesc;
-	}
-	public void setLongDesc(String longDesc) {
-		this.longDesc = longDesc;
-	}
-	
+
 }
