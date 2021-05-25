@@ -46,4 +46,13 @@ public class Player {
 			System.out.println("To the west you see the " + neighbours[3].getName());
 		}
 	}
+	
+	// Help command
+	public void help() {
+		System.out.println("To traverse around the manor: 'head' [direction]");
+		System.out.println("Where direction is 'north'/'south'/'east'/'west'");
+		System.out.println("To observe your current room: 'observe'");
+		System.out.println("To quit at any time: 'quit'");
+		System.out.println("To access controls again: 'help'");
+	}
 }
