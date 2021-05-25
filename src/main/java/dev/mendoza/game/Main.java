@@ -58,7 +58,7 @@ public class Main {
 						}
 					}
 				}
-				else { // User 2-Part Command Inputed
+				else { // User 2-Part Command Inputed ('head' [direction])
 					switch(splitUserInput[0]) { // Check first part of command
 						case "head": case "Head": {
 							switch(splitUserInput[1]) { // Check second part of command
@@ -138,18 +138,5 @@ public class Main {
 						+ "(Type 'help' for a reminder of the commands)");
 			}
 		}
-		
-//		user.scout();
-//		user.observe();
-//		user.options();
-//		System.out.println(game.getStartingRoom().getShortDesc());
-//		System.out.println(game.getStartingRoom().getLongDesc());
-//		Room[] test = game.getRooms();
-//		for(int i = 0; i < test.length; i++)
-//		{
-//			System.out.println(test[i].getName());
-//		}
 	}
-	
-	
 }

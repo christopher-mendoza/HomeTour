@@ -20,7 +20,7 @@ public class Player {
 	
 	// Short description
 	public void scout() {
-		System.out.println("\nYou are in the " + this.currentRoom.getName());
+		System.out.println("\nYou are in the " + this.currentRoom.getName() + ".");
 		System.out.println(this.currentRoom.getShortDesc());
 	}
 	
@@ -36,16 +36,16 @@ public class Player {
 		Room[] neighbours = this.currentRoom.getExits();
 		System.out.println();
 		if(neighbours[0] != null) {
-			System.out.println("To the north you see the " + neighbours[0].getName());
+			System.out.println("To the north you see the " + neighbours[0].getName() + ".");
 		}
 		if(neighbours[1] != null) {
-			System.out.println("To the south you see the " + neighbours[1].getName());
+			System.out.println("To the south you see the " + neighbours[1].getName() + ".");
 		}
 		if(neighbours[2] != null) {
-			System.out.println("To the east you see the " + neighbours[2].getName());
+			System.out.println("To the east you see the " + neighbours[2].getName() + ".");
 		}
 		if(neighbours[3] != null) {
-			System.out.println("To the west you see the " + neighbours[3].getName());
+			System.out.println("To the west you see the " + neighbours[3].getName() + ".");
 		}
 	}
 	
