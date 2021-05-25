@@ -26,7 +26,7 @@ public class RoomManager {
 	}
 	
 	public void init() {
-		
+		// Creating Rooms
 		String studioTitle = "Studio";
 		String studioSDesc = "Placeholder Studio Text";
 		String studioLDesc = "Placehold Long Studio Text";
@@ -57,6 +57,25 @@ public class RoomManager {
 		String kitchenLDesc = "Placeholder Long Kitchen Text";
 		Room kitchen = new Room(kitchenTitle, kitchenSDesc, kitchenLDesc);
 		
+		// Attaching Rooms
+		/*
+		 * Dining <-> Court <-> Kitchen
+		 *   ^          ^         ^
+		 *   v          v         v
+		 * Studio <-> Foyer <-> Library
+		 * 
+		 */
+		studio.setNorthExit(dining);
+		studio.setEastExit(foyer);
+		
+		foyer.setNorthExit(court);
+		foyer.setEastExit(library);
+		
+		library.setNorthExit(kitchen);
+		
+		court.setWestExit(dining);		
+		
+		// Creating Room Array
 		Room[] manor = {studio, foyer, library, dining, court, kitchen};
 		
 		this.rooms = manor;
