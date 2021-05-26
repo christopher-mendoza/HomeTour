@@ -22,5 +22,4 @@ public class Fixture {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-
 }
