@@ -3,13 +3,13 @@ package dev.mendoza.fixtures;
 public class Room {
 	private Room[] exits;
 	private String name;
-	private String shortDesc;
-	private String longDesc;
-	public Room(String name, String shortDesc, String longDesc) {
+	private String desc;
+	private Fixture item;
+	
+	public Room(String name, String desc) {
 		super();
 		this.name = name;
-		this.shortDesc = shortDesc;
-		this.longDesc = longDesc;
+		this.desc = desc;
 		this.exits = new Room[4]; // layout as {north, south, east, west}
 	}
 	
@@ -72,19 +72,18 @@ public class Room {
 		this.name = name;
 	}
 	
-	public String getShortDesc() {
-		return shortDesc;
+	public String getDesc() {
+		return desc;
 	}
-	public void setShortDesc(String shortDesc) {
-		this.shortDesc = shortDesc;
-	}
-	
-	public String getLongDesc() {
-		return longDesc;
-	}
-	public void setLongDesc(String longDesc) {
-		this.longDesc = longDesc;
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 	
-	
+	public Fixture getItem() {
+		return item;
+	}
+	public void setItem(Fixture item) {
+		this.item = item;
+	}
+
 }

@@ -1,5 +1,6 @@
 package dev.mendoza.game;
 
+import dev.mendoza.fixtures.Fixture;
 import dev.mendoza.fixtures.Room;
 
 public class RoomManager {
@@ -28,34 +29,42 @@ public class RoomManager {
 	public void init() {
 		// Creating Rooms
 		String studioTitle = "Studio";
-		String studioSDesc = "Placeholder Studio Text";
-		String studioLDesc = "Placehold Long Studio Text";
-		Room studio = new Room(studioTitle, studioSDesc, studioLDesc);
+		String studioDesc = "Placeholder Studio Text";
+		Room studio = new Room(studioTitle, studioDesc);
 		
 		String foyerTitle = "Foyer";
-		String foyerSDesc = "Placeholder Foyer Text";
-		String foyerLDesc = "Placeholder Long Foyer Text";
-		Room foyer = new Room(foyerTitle, foyerSDesc, foyerLDesc);
+		String foyerDesc = "Placeholder Foyer Text";
+		Room foyer = new Room(foyerTitle, foyerDesc);
 		
 		String libraryTitle = "Library";
-		String librarySDesc = "Placeholder Library Text";
-		String libraryLDesc = "Placeholder Long Library Text";
-		Room library = new Room(libraryTitle, librarySDesc, libraryLDesc);
+		String libraryDesc = "Placeholder Library Text";
+		Room library = new Room(libraryTitle, libraryDesc);
 		
 		String diningTitle = "Dining Room";
-		String diningSDesc = "Placeholder Dining Room Text";
-		String diningLDesc = "Placeholder Long Dining Room Text";
-		Room dining = new Room(diningTitle, diningSDesc, diningLDesc);
+		String diningDesc = "Placeholder Dining Room Text";
+		Room dining = new Room(diningTitle, diningDesc);
 		
 		String courtTitle = "Courtyard";
-		String courtSDesc = "Placeholder Courtyard Text";
-		String courtLDesc = "Placeholder Long Courtyard Text";
-		Room court = new Room(courtTitle, courtSDesc, courtLDesc);
+		String courtDesc = "Placeholder Courtyard Text";
+		Room court = new Room(courtTitle, courtDesc);
 		
 		String kitchenTitle = "Kitchen";
-		String kitchenSDesc = "Placeholder Kitchen Text";
-		String kitchenLDesc = "Placeholder Long Kitchen Text";
-		Room kitchen = new Room(kitchenTitle, kitchenSDesc, kitchenLDesc);
+		String kitchenDesc = "Placeholder Kitchen Text";
+		Room kitchen = new Room(kitchenTitle, kitchenDesc);
+		
+		// Add Items
+		String monocleTitle = "Monocle";
+		String monocleDesc = "A monocle because the Mendozas are fancy like that.";
+		Fixture monocle = new Fixture(monocleTitle, monocleDesc);
+		library.setItem(monocle);
+		
+		String spoonTitle = "Spoon";
+		String spoonDesc = "A spoon, the mighty utensil. Only the brave would use it as all three utensils.";
+		Fixture spoon = new Fixture(spoonTitle, spoonDesc);
+		dining.setItem(spoon);
+		
+		
+		
 		
 		// Attaching Rooms
 		/*

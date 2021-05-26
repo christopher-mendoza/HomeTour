@@ -35,13 +35,13 @@ public class Player {
 	// Short description
 	public void scout() {
 		System.out.println("\nYou are in the " + this.currentRoom.getName() + ".");
-		System.out.println(this.currentRoom.getShortDesc());
+		System.out.println(this.currentRoom.getDesc());
 	}
 	
 	// Long description
 	public void observe() {
 		System.out.println("You observe your surroundings.");
-		System.out.println(this.currentRoom.getLongDesc());
+		scout();
 		options();
 	}
 	
@@ -54,6 +54,7 @@ public class Player {
 	// Print inventory
 	public void bag() {
 		for(Fixture i : this.inventory) {
+			System.out.println();
 			System.out.println(i.getName());
 			System.out.println(i.getDesc());
 		}
