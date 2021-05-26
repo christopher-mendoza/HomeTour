@@ -29,27 +29,27 @@ public class RoomManager {
 	public void init() {
 		// Creating Rooms
 		String studioTitle = "Studio";
-		String studioDesc = "Placeholder Studio Text";
+		String studioDesc = "The studio where nothing gets done and no one is happy about it.";
 		Room studio = new Room(studioTitle, studioDesc);
 		
 		String foyerTitle = "Foyer";
-		String foyerDesc = "Placeholder Foyer Text";
+		String foyerDesc = "A unique entranceway laden with badly drawn self-portraits of the Sir Mendoza himself.";
 		Room foyer = new Room(foyerTitle, foyerDesc);
 		
 		String libraryTitle = "Library";
-		String libraryDesc = "Placeholder Library Text";
+		String libraryDesc = "A library with many books that no one reads.";
 		Room library = new Room(libraryTitle, libraryDesc);
 		
 		String diningTitle = "Dining Room";
-		String diningDesc = "Placeholder Dining Room Text";
+		String diningDesc = "A comically small room, with a comically large table taking up a majority of the space.";
 		Room dining = new Room(diningTitle, diningDesc);
 		
 		String courtTitle = "Courtyard";
-		String courtDesc = "Placeholder Courtyard Text";
+		String courtDesc = "A place for relaxation? Perhaps, it could be used for more...";
 		Room court = new Room(courtTitle, courtDesc);
 		
 		String kitchenTitle = "Kitchen";
-		String kitchenDesc = "Placeholder Kitchen Text";
+		String kitchenDesc = "With the advent of same-second-delivery-meals-ready-to-eat, this kitchen has seldom been used.";
 		Room kitchen = new Room(kitchenTitle, kitchenDesc);
 		
 		// Add Items

@@ -42,7 +42,7 @@ public class Main {
 						// User Inventory
 						case "inventory": case "Inventory": {
 							if(user.getInventory().isEmpty()) {
-								System.out.println("You currently do not have any items in your inventory");
+								System.out.println("You currently do not have any items in your inventory.");
 							}
 							else {
 								user.bag();
@@ -150,7 +150,7 @@ public class Main {
 								}
 							}
 							else {
-								System.out.println("There is no " + splitUserInput[1] + " in this room.");
+								System.out.println("There is no '" + splitUserInput[1] + "' in this room.");
 							}
 							break;
 						}
