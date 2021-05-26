@@ -58,7 +58,6 @@ public class Player {
 			System.out.println(i.getDesc());
 		}
 	}
-	
 	// Show available rooms to player
 	public void options() {
 		Room[] neighbours = this.currentRoom.getExits();
