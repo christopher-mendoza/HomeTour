@@ -38,6 +38,18 @@ public class Main {
 							user.observe();
 							break;
 						}
+						
+						// User Inventory
+						case "inventory": case "Inventory": {
+							if(user.getInventory().isEmpty()) {
+								System.out.println("You currently do not have any items in your inventory");
+							}
+							else {
+								user.bag();
+							}
+							break;
+						}
+						
 						// User Help
 						case "h": case "H":
 						case "help": case "Help": {
@@ -60,6 +72,7 @@ public class Main {
 				}
 				else { // User 2-Part Command Inputed ('head' [direction])
 					switch(splitUserInput[0]) { // Check first part of command
+						// User Attempts Movement
 						case "head": case "Head": {
 							switch(splitUserInput[1]) { // Check second part of command
 								// User attempts North
@@ -122,6 +135,22 @@ public class Main {
 								default: {
 									userInputError(userInput);
 								}
+							}
+							break;
+						}
+						
+						// User Attempt to Get Item
+						case "get": case "Get": {
+							if(user.getCurrentRoom().getItem() != null) {
+								if(splitUserInput[1].equalsIgnoreCase(user.getCurrentRoom().getItem().getName())) {
+									System.out.println("You have acquired a " + user.getCurrentRoom().getItem().getName() + 
+											". Congratulations!");
+									user.take(user.getCurrentRoom().getItem());
+									user.getCurrentRoom().setItem(null);
+								}
+							}
+							else {
+								System.out.println("There is no " + splitUserInput[1] + " in this room.");
 							}
 							break;
 						}

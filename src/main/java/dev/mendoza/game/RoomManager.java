@@ -53,17 +53,20 @@ public class RoomManager {
 		Room kitchen = new Room(kitchenTitle, kitchenDesc);
 		
 		// Add Items
-		String monocleTitle = "Monocle";
+		String monocleTitle = "monocle";
 		String monocleDesc = "A monocle because the Mendozas are fancy like that.";
 		Fixture monocle = new Fixture(monocleTitle, monocleDesc);
 		library.setItem(monocle);
 		
-		String spoonTitle = "Spoon";
+		String spoonTitle = "spoon";
 		String spoonDesc = "A spoon, the mighty utensil. Only the brave would use it as all three utensils.";
 		Fixture spoon = new Fixture(spoonTitle, spoonDesc);
 		dining.setItem(spoon);
 		
-		
+		String stoneTitle = "stone";
+		String stoneDesc = "A loose stone, perhaps it is special in some way. But it definately isn't.";
+		Fixture stone = new Fixture(stoneTitle, stoneDesc);
+		court.setItem(stone);
 		
 		
 		// Attaching Rooms

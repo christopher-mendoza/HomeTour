@@ -42,6 +42,10 @@ public class Player {
 	public void observe() {
 		System.out.println("You observe your surroundings.");
 		scout();
+		if(this.currentRoom.getItem() != null) {
+			System.out.println("You see a " + this.currentRoom.getItem().getName() + 
+					". Perhaps it could be useful.");
+		}
 		options();
 	}
 	
@@ -53,6 +57,7 @@ public class Player {
 	
 	// Print inventory
 	public void bag() {
+		System.out.println("You check your inventory...");
 		for(Fixture i : this.inventory) {
 			System.out.println();
 			System.out.println(i.getName());
@@ -79,10 +84,14 @@ public class Player {
 	
 	// Help command
 	public void help() {
+		System.out.println("***************************HELP***************************");
 		System.out.println("To traverse around the manor: 'head' [direction]");
 		System.out.println("\tWhere direction is 'north'/'south'/'east'/'west'");
+		System.out.println("To pick up an item: 'get' [item]");
+		System.out.println("To check your inventory: 'inventory'");
 		System.out.println("To observe your current room: 'observe'");
 		System.out.println("To quit at any time: 'quit'");
 		System.out.println("To access controls again: 'help'");
+		System.out.println("***************************HELP***************************");
 	}
 }
