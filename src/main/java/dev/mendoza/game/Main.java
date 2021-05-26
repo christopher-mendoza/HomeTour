@@ -7,8 +7,8 @@ import dev.mendoza.fixtures.Room;
 public class Main {
 	// Print error for bad user input
 	public static void userInputError(String userInput) {
-		System.out.println("I did not understand '" + userInput +
-				"'. Please try again. \n"
+		System.out.println("You attempted to '" + userInput +
+				"'. It did not work, please try again. \n"
 				+ "(Type 'help' for a reminder of the commands)");
 	}
 	
